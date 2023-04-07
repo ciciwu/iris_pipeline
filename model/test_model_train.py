@@ -3,8 +3,6 @@ import numpy as np
 
 class TestHousePricePredictor(unittest.TestCase):
 
-    def test_train(self):
-        self.assertTrue(True)
     def test_trainw(self):
         self.assertTrue(True)
 

@@ -1,3 +1,4 @@
+jsonify
 pytest
 numpy
 pandas
