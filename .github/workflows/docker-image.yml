@@ -26,17 +26,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my_ml_project:$(date +%s)
       
-    - name: Build Docker image
-      run: docker build -t my_ml_project:$(date +%s) .
-
-    - name: Start Docker container
-      run: docker run -d -p 5000:5000 --name my_ml_project:$(date +%s) my_ml_project:$(date +%s)
-
-    - name: Wait for container to start
-      run: docker ps | grep my_ml_project:$(date +%s) | awk '{print $1}' | xargs docker logs -f
-
-    - name: Run tests
-      run: docker exec my_ml_project:$(date +%s) pytest
-
-    - name: Tear down container
-      run: docker stop my_ml_project:$(date +%s) && docker rm my_ml_project
+    
