@@ -5,6 +5,8 @@ class TestHousePricePredictor(unittest.TestCase):
 
     def test_train(self):
         self.assertTrue(True)
+    def test_trainw(self):
+        self.assertTrue(True)
 
 
 if __name__ == '__main__':
